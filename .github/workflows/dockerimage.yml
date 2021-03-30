@@ -23,8 +23,8 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64
-          # pull: true
+          pull: true
           push: true
           tags: mfontani/acng:latest
-          # build-args: BUILDKIT_INLINE_CACHE=1
-          # cache-from: mfontani/acng:latest
+          build-args: BUILDKIT_INLINE_CACHE=1
+          cache-from: mfontani/acng:latest
