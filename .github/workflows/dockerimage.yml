@@ -28,3 +28,25 @@ jobs:
           tags: mfontani/acng:latest
           build-args: BUILDKIT_INLINE_CACHE=1
           cache-from: mfontani/acng:latest
+      - name: build and push the acng buster image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64
+          # pull: true
+          push: true
+          tags: mfontani/acng:buster
+          build-args: BUILDKIT_INLINE_CACHE=1
+          # cache-from: mfontani/acng:latest
+      - name: build and push the acng sid image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile.sid
+          platforms: linux/amd64
+          # pull: true
+          push: true
+          tags: mfontani/acng:sid
+          build-args: BUILDKIT_INLINE_CACHE=1
+          # cache-from: mfontani/acng:sid

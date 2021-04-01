@@ -1,0 +1,20 @@
+# vim: set filetype=dockerfile
+# docker inspect --format='{{index .RepoDigests 0}}' debian:sid
+FROM debian@sha256:25c694c910133d939a29d3b59efefe7dea33b16e3381ca738bea1478d528e6cc
+
+RUN set -uex; \
+    apt-get update -y; \
+    apt-get install apt-cacher-ng -y --no-install-recommends; \
+    mv /etc/apt-cacher-ng/acng.conf /etc/apt-cacher-ng/acng.conf.original; \
+    ln -sf /dev/stdout /var/log/apt-cacher-ng/apt-cacher.log; \
+    ln -sf /dev/stderr /var/log/apt-cacher-ng/apt-cacher.err; \
+    apt-get clean all; \
+    rm -rf /var/lib/apt/lists/*;
+
+COPY files/* /etc/apt-cacher-ng/
+
+EXPOSE 3142
+VOLUME ["/var/cache/apt-cacher-ng"]
+
+ENTRYPOINT ["/usr/sbin/apt-cacher-ng"]
+CMD ["-c","/etc/apt-cacher-ng"]
