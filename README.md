@@ -6,6 +6,13 @@ This repository contains a `Dockerfile`, which is used to create/build a
 `debian:buster-slim`-based docker image which is then published via github
 actions to the docker hub, at [mfontani/acng](https://hub.docker.com/r/mfontani/acng).
 
+# example configurations:
+
+    $ cat /etc/apt/apt.conf.d/00aptproxy
+    Acquire::http::Proxy "http://192.88.99.50:3142";
+    Acquire::https::Proxy "DIRECT";
+    Acquire::http::Proxy::bugs.debian.org "DIRECT";
+
 # Author
 
 Marco Fontani - <MFONTANI@cpan.org> - https://marcofontani.it/ - https://blog.darkpan.com/
