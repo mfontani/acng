@@ -3,7 +3,7 @@
 ... is my "personal" `apt-cacher-ng` instance.
 
 This repository contains a `Dockerfile`, which is used to create/build a
-`debian:buste-slim`-based docker image which is then published via github
+`debian:buster-slim`-based docker image which is then published via github
 actions to the docker hub, at [mfontani/acng](https://hub.docker.com/r/mfontani/acng).
 
 # Author
