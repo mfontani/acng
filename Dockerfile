@@ -1,5 +1,5 @@
 # docker inspect --format='{{index .RepoDigests 0}}' debian:buster-slim
-FROM debian@sha256:1e61bfbfcef8f9690a0641e4dbb0eae46e2ad00eff065bd586a1d58967ee4b66
+FROM debian@sha256:b586cf8c850cada85a47599f08eb34ede4a7c473551fd7c68cbf20ce5f8dbbf1
 
 RUN set -uex; \
     apt-get update -y; \
