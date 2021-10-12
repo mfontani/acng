@@ -1,6 +1,6 @@
 # vim: set filetype=dockerfile
 # docker inspect --format='{{index .RepoDigests 0}}' debian:sid
-FROM debian@sha256:80cd4fe4f44277533b8fe279eafbb4db55985e51b10e03b23fd0f368d9fa214f
+FROM debian@sha256:4e85ef0d6eac69c503ba9e4b4b1957c77468ecbe2c38e453ed0cc0ee0e709869
 
 RUN set -uex; \
     apt-get update -y; \
