@@ -19,7 +19,7 @@ Marco Fontani - <MFONTANI@cpan.org> - https://marcofontani.it/ - https://blog.da
 
 # License
 
-Copyright 2021 Marco Fontani <MFONTANI@cpan.org>
+Copyright 2021-2022 Marco Fontani <MFONTANI@cpan.org>
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
