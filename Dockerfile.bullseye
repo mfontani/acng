@@ -1,5 +1,5 @@
-# docker inspect --format='{{index .RepoDigests 0}}' debian:bullseye-slim
-FROM debian@sha256:c8dfa67963242ad311a16f6296a61d430f43267cb26675c2153ba4c5efea9ee8
+### docker-from debian:bullseye-slim
+FROM debian@sha256:f6957458017ec31c4e325a76f39d6323c4c21b0e31572efa006baa927a160891
 
 RUN set -uex; \
     apt-get update -y; \
@@ -17,3 +17,4 @@ VOLUME ["/var/cache/apt-cacher-ng"]
 
 ENTRYPOINT ["/usr/sbin/apt-cacher-ng"]
 CMD ["-c","/etc/apt-cacher-ng"]
+# vim: set filetype=dockerfile

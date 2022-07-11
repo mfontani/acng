@@ -1,5 +1,5 @@
-# docker inspect --format='{{index .RepoDigests 0}}' debian:buster-slim
-FROM debian@sha256:c691cd30f4c8b9ef0349e0753934f2d1ef0fcf4d9bd11b65aad6b60036c1d64f
+### docker-from debian:buster-slim
+FROM debian@sha256:7e9b444ed3453d940c91dde1ea883d1cb68c356fe8206fcc046dd2ab73431982
 
 RUN set -uex; \
     apt-get update -y; \
@@ -17,3 +17,4 @@ VOLUME ["/var/cache/apt-cacher-ng"]
 
 ENTRYPOINT ["/usr/sbin/apt-cacher-ng"]
 CMD ["-c","/etc/apt-cacher-ng"]
+# vim: set filetype=dockerfile

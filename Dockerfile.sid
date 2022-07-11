@@ -1,5 +1,4 @@
-# vim: set filetype=dockerfile
-# docker inspect --format='{{index .RepoDigests 0}}' debian:sid
+### docker-from debian:sid
 FROM debian@sha256:d91301745591796f057990a4b2e0d6125c80fa6e09c2395052b425eed8240654
 
 RUN set -uex; \
@@ -18,3 +17,4 @@ VOLUME ["/var/cache/apt-cacher-ng"]
 
 ENTRYPOINT ["/usr/sbin/apt-cacher-ng"]
 CMD ["-c","/etc/apt-cacher-ng"]
+# vim: set filetype=dockerfile
