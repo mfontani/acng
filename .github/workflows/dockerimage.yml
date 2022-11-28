@@ -36,7 +36,7 @@ jobs:
           platforms: linux/amd64
           pull: true
           push: true
-          tags: mfontani/acng:buster
+          tags: mfontani/acng:bullseye
           build-args: BUILDKIT_INLINE_CACHE=1
           cache-from: mfontani/acng:latest
       - name: build and push the acng buster image
