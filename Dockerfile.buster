@@ -1,5 +1,5 @@
 ### docker-from debian:buster-slim
-FROM debian@sha256:acba41442b388703260ef3f782793ad1ae945028ab12ad6840e7d80d4abbec8d
+FROM debian@sha256:5dbce817ee72802025a38a388237b0ea576aa164bc90b7102b73aa42fef4d713
 
 RUN set -uex; \
     apt-get update -y; \

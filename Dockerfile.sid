@@ -1,5 +1,5 @@
 ### docker-from debian:sid
-FROM debian@sha256:5a8e22f62cd3aab123d7298d32db639b7dcda7900c9ba90e74fdd5d0816fe2cc
+FROM debian@sha256:858c050957631c8dbe1cb9f49ef8f90f73d3bacdb64b40f0e94cbe34682bec11
 
 RUN set -uex; \
     apt-get update -y; \
